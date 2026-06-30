@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aysén Vivo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ENCABEZADO -->
+    <header>
+        <div class="contenedor">
+            <h1>Aysén Vivo</h1>
+            <p>Plataforma de Experiencias Turísticas Sustentables</p>
+        </div>
+    </header>
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="contenedor">
+        <!-- INTRODUCCIÓN -->
+        <section class="hero">
+            <h2>Descubre la Patagonia Chilena</h2>
+            <p>
+                Explora experiencias únicas en la Región de Aysén:
+                trekking, navegación, pesca, cultura y mucho más.
+            </p>
+        </section>
+        <!-- FILTROS -->
+        <section class="filtros">
+            <h2>Filtrar experiencias</h2>
+            <div class="botones-filtro">
+                <button class="filtro activo" data-categoria="Todos">
+                    Todos
+                </button>
+                <button class="filtro" data-categoria="Trekking">
+                    Trekking
+                </button>
+                <button class="filtro" data-categoria="Navegación">
+                    Navegación
+                </button>
+                <button class="filtro" data-categoria="Pesca">
+                    Pesca
+                </button>
+                <button class="filtro" data-categoria="Cultura">
+                    Cultura
+                </button>
+            </div>
+        </section>
+        <!-- TARJETAS DINÁMICAS -->
+        <section>
+            <h2>Experiencias</h2>
+            <div id="listaExperiencias" class="tarjetas">
+                <!--
+                Las tarjetas se crean completamente
+                desde JavaScript.
+                -->
+            </div>
+        </section>
+        <!-- FORMULARIO -->
+        <section class="reserva">
+            <h2>Reserva tu experiencia</h2>
+            <form id="formReserva" novalidate>
+                <div class="campo">
+                    <label for="nombre">
+                        Nombre completo
+                    </label>
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                    >
+                </div>
+                <div class="campo">
+                    <label for="email">
+                        Correo electrónico
+                    </label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                    >
+                </div>
+                <div class="campo">
+                    <label for="experiencia">
+                        Experiencia
+                    </label>
+                    <select
+                        id="experiencia"
+                        name="experiencia"
+                    >
+                        <!--
+                        Se llena automáticamente
+                        desde JavaScript.
+                        -->
+                    </select>
+                </div>
+                <div class="campo">
+                    <label for="personas">
+                        Cantidad de personas
+                    </label>
+                    <input
+                        type="number"
+                        id="personas"
+                        name="personas"
+                        min="1"
+                        value="1"
+                    >
+                </div>
+                <button type="submit">
+                    Reservar
+                </button>
+            </form>
+            <!-- Mensajes de validación -->
+            <div id="mensaje"></div>
+        </section>
+    </main>
+    <!-- PIE -->
+    <footer>
+        <p>
+            © 2026 Aysén Vivo - Turismo Sustentable
+        </p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
